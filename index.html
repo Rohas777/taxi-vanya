@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="../js/jquery.min.js" type="module" defer></script>
+        <script src="../js/script.js" type="module" defer></script>
+        <title>Такси Ваня</title>
+    </head>
+    <body class="main">
+        <section class="fascia">
+            <div class="container">
+                <div class="fascia__socials">
+                    <a href="#"><img src="/images/whatsapp.svg" alt="Whats App" /></a>
+                    <a href="viber://add?number=#"
+                        ><img src="/images/viber.svg" alt="Viber"
+                    /></a>
+                    <a href="#"><img src="/images/telegram.svg" alt="Telegram" /></a>
+                </div>
+                <div class="fascia__contacts">
+                    <div class="fascia__group fascia__group_phones">
+                        <img src="/images/phone.svg" alt="Phone" />
+                        <a href="tel:8 (800) 777-50-40">8 (800) 777-50-40</a>
+                        <a href="tel:+7 (978) 200-50-40">+7 (978) 200-50-40</a>
+                    </div>
+                    <div class="fascia__group fascia__group_mails">
+                        <img src="/images/mail.svg" alt="Mail" />
+                        <a href="mailto:taxivanya@yandex.ru">taxivanya@yandex.ru</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <header>
+            <nav class="nav">
+                <div class="container">
+                    <a href="/" class="nav__logo"
+                        ><img src="/images/logo.svg" alt="Logo"
+                    /></a>
+                    <div class="nav__links">
+                        <a class="nav_link" href="/about.html">О компании</a>
+                        <a class="nav_link" href="/reviews.html">Отзывы</a>
+                        <a class="nav_link" href="/posts.html">Статьи</a>
+                        <a class="nav_link" href="/questions.html">Частые вопросы</a>
+                    </div>
+                    <a href="/calculation.html" class="nav__btn btn">
+                        <span>Заказать</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="wrapper">
+            <main>
+                <section class="parallax">
+                    <div class="container">
+                        <div class="parallax__bg">
+                            <img
+                                class="parallax__cloud1 parallax__element"
+                                src="/images/parallax/1.svg"
+                                alt="Cloud"
+                            />
+                            <img
+                                class="parallax__cloud2 parallax__element"
+                                src="/images/parallax/2.svg"
+                                alt="Cloud"
+                            />
+                            <img
+                                class="parallax__cloud3 parallax__element"
+                                src="/images/parallax/3.svg"
+                                alt="Cloud"
+                            />
+                            <img
+                                class="parallax__cloud4 parallax__element"
+                                src="/images/parallax/4.svg"
+                                alt="Cloud"
+                            />
+                            <img
+                                class="parallax__cloud5 parallax__element"
+                                src="/images/parallax/5.svg"
+                                alt="Cloud"
+                            />
+                            <img
+                                class="parallax__cloud6 parallax__element"
+                                src="/images/parallax/6.svg"
+                                alt="Cloud"
+                            />
+                            <img
+                                class="parallax__buildings parallax__element"
+                                src="/images/parallax/buildings.svg"
+                                alt="Buildings"
+                            />
+                        </div>
+                        <h1>ТАКСИ ВАНЯ</h1>
+                        <p class="parallax__description">
+                            Исследуйте Крым с межгородским такси! Надёжные
+                            водители, комфортабельные автомобили и удобное
+                            бронирование сделают ваше путешествие приятным и
+                            безопасным.
+                        </p>
+                    </div>
+                </section>
+                <section class="main-head">
+                    <div class="main-head__elips">
+                        <img src="/images/bg-elips.svg" alt="Taxi Vanya" />
+                    </div>
+                    <img
+                        class="main-head__sprite"
+                        src="/images/home-head.svg"
+                        alt="Taxi Vanya"
+                    />
+                </section>
+                <section class="calc hideTopParallax">
+                    <div class="container">
+                        <p class="calc__bg-text bg-text">Расчет стоимости</p>
+                        <div class="calc__form">
+                            <div class="calc__wrapper">
+                                <div class="calc__column">
+                                    <div class="calc__directions">
+                                        <input type="text" placeholder="Откуда" />
+                                        <div class="calc__swap btn btn_mini">
+                                            <img src="/images/swap.svg" alt="Swap" />
+                                        </div>
+                                        <input type="text" placeholder="Куда" />
+                                    </div>
+                                    <div class="calc__label">
+                                        <span>Обратный трансфер <b>*</b></span>
+                                        <label class="calc__switch">
+                                            <input type="checkbox" />
+                                            <span class="calc__switch-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="calc__column">
+                                    <input type="date" placeholder="Дата" max="2100-12-31" />
+                                    <input type="time" placeholder="Время" />
+                                    <div class="calc__passengers">
+                                        <span class="calc__title">Пассажиры:</span>
+                                        <div class="calc__counts">
+                                            <label>
+                                                <p>Взрослые</p>
+                                                <div class="calc__number">
+                                                    <div
+                                                        class="calc__btn btn btn_mini btn_minus"
+                                                    >
+                                                        <span></span>
+                                                    </div>
+                                                    <input
+                                                        type="number"
+                                                        value="0"
+                                                        min="0"
+                                                        max="99"
+                                                        onkeypress="return false"
+                                                    />
+                                                    <div
+                                                        class="calc__btn btn btn_mini btn_plus"
+                                                    >
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label>
+                                                <p>Дети</p>
+                                                <div class="calc__number">
+                                                    <div
+                                                        class="calc__btn btn btn_mini btn_minus"
+                                                    >
+                                                        <span></span>
+                                                    </div>
+                                                    <input
+                                                        type="number"
+                                                        value="0"
+                                                        min="0"
+                                                        max="99"
+                                                        onkeypress="return false"
+                                                    />
+                                                    <div
+                                                        class="calc__btn btn btn_mini btn_plus"
+                                                    >
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calc__bottom">
+                                <p><b>*</b> Обратный трансфер со скидкой <b>10%</b></p>
+                                <div class="calc__btn btn btn_act">
+                                    <span>Найти</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="advantages">
+                    <div class="container">
+                        <p class="advantages__bg-text bg-text">Преимущества</p>
+                        <h2 class="advantages__section-title section-title">
+                            Почему выбирают именно нас
+                        </h2>
+                        <div class="advantages__diagram">
+                            <div class="advantages__bg">
+                                <img
+                                    src="/images/advantages/Car.svg"
+                                    alt="Car"
+                                />
+                            </div>
+                            <div class="advantages__cards">
+                                <div class="advantages__card">
+                                    <div class="advantages__card-wrapper">
+                                        <div class="advantages__card-content">
+                                            <img
+                                                src="/images/advantages/watch.svg"
+                                                alt="watch"
+                                            />
+                                            <p>
+                                                Бесплатное ожидание даже <br />
+                                                в случае сильной задержки рейса
+                                            </p>
+                                        </div>
+                                        <svg
+                                            class="advantages__line"
+                                            width="366"
+                                            height="199"
+                                            viewBox="0 0 366 199"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M0.5 197.5H365V0"
+                                                stroke="#A7A8AB"
+                                                stroke-width="2"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="advantages__card">
+                                    <div class="advantages__card-wrapper">
+                                        <div class="advantages__card-content">
+                                            <img
+                                                src="/images/advantages/shield.svg"
+                                                alt="shield"
+                                            />
+                                            <p>
+                                                Гарантия <br />
+                                                подачи машины
+                                            </p>
+                                        </div>
+                                        <svg
+                                            class="advantages__line"
+                                            width="365"
+                                            height="2"
+                                            viewBox="0 0 365 2"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M0.5 1H365"
+                                                stroke="#A7A8AB"
+                                                stroke-width="2"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="advantages__card">
+                                    <div class="advantages__card-wrapper">
+                                        <div class="advantages__card-content">
+                                            <img
+                                                src="/images/advantages/headphones.svg"
+                                                alt="headphones"
+                                            />
+                                            <p>
+                                                Круглосуточная <br />
+                                                линия поддержки
+                                            </p>
+                                        </div>
+                                        <svg
+                                            class="advantages__line"
+                                            width="185"
+                                            height="177"
+                                            viewBox="0 0 185 177"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M1 177V52.5H183.5V0"
+                                                stroke="#A7A8AB"
+                                                stroke-width="2"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="advantages__card">
+                                    <div class="advantages__card-wrapper">
+                                        <div class="advantages__card-content">
+                                            <img
+                                                src="/images/advantages/coins.svg"
+                                                alt="coins"
+                                            />
+                                            <p>
+                                                Все поездки по системе <br />
+                                                «от двери до дверей» без доплат
+                                            </p>
+                                        </div>
+                                        <svg
+                                            class="advantages__line"
+                                            width="365"
+                                            height="2"
+                                            viewBox="0 0 365 2"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M0.5 1H365"
+                                                stroke="#A7A8AB"
+                                                stroke-width="2"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="advantages__card">
+                                    <div class="advantages__card-wrapper">
+                                        <div class="advantages__card-content">
+                                            <img
+                                                src="/images/advantages/hands.svg"
+                                                alt="hands"
+                                            />
+                                            <p>
+                                                Выполняем до 99% заказов <br />
+                                                даже в случае форс-мажора
+                                            </p>
+                                        </div>
+                                        <svg
+                                            class="advantages__line"
+                                            width="185"
+                                            height="177"
+                                            viewBox="0 0 185 177"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M1 177V52.5H183.5V0"
+                                                stroke="#A7A8AB"
+                                                stroke-width="2"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="advantages__card">
+                                    <div class="advantages__card-wrapper">
+                                        <div class="advantages__card-content">
+                                            <img
+                                                src="/images/advantages/human.svg"
+                                                alt="human"
+                                            />
+                                            <p>
+                                                Наличие детских <br />
+                                                удерживающих устройств
+                                            </p>
+                                        </div>
+                                        <svg
+                                            class="advantages__line"
+                                            width="365"
+                                            height="2"
+                                            viewBox="0 0 365 2"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M0.5 1H365"
+                                                stroke="#A7A8AB"
+                                                stroke-width="2"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="advantages__card">
+                                    <div class="advantages__card-wrapper">
+                                        <div class="advantages__card-content">
+                                            <img
+                                                src="/images/advantages/wallet.svg"
+                                                alt="wallet"
+                                            />
+                                            <p>
+                                                Фиксированная цена во все дни,
+                                                <br />
+                                                включая выходные и праздники
+                                            </p>
+                                        </div>
+                                        <svg
+                                            class="advantages__line"
+                                            width="366"
+                                            height="199"
+                                            viewBox="0 0 366 199"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M0.5 197.5H365V0"
+                                                stroke="#A7A8AB"
+                                                stroke-width="2"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="prices">
+                    <div class="container">
+                        <p class="prices__bg-text bg-text">Цены</p>
+                        <h2 class="prices__section-title section-title">
+                            Популярные маршруты и цены
+                        </h2>
+                        <div class="prices__wrapper">
+                            <div class="prices__cards">
+                                <article class="prices__card">
+                                    <div class="prices__card-image">
+                                        <img src="/images/prices/1.png" alt="Evpatoria" />
+                                    </div>
+                                    <div class="prices__card-content">
+                                        <p class="prices__card-cities">
+                                            <span>Симферополь</span>
+                                            <span>Евпатория</span>
+                                        </p>
+                                        <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                        <a href="#" class="prices__card-btn btn">
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </article>
+                                
+                                <article class="prices__card">
+                                    <div class="prices__card-image">
+                                        <img
+                                            src="/images/prices/2.png"
+                                            alt="Sevastopol"
+                                        />
+                                    </div>
+                                    <div class="prices__card-content">
+                                        <p class="prices__card-cities">
+                                            <span>Симферополь</span>
+                                            <span>Севастополь</span>
+                                        </p>
+                                        <p class="prices__card-price">
+                                            от <span>2 000</span> ₽
+                                        </p>
+                                        <a
+                                            href="#"
+                                            class="prices__card-btn btn"
+                                        >
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </article>
+                                <article class="prices__card">
+                                    <div class="prices__card-image">
+                                        <img src="/images/prices/1.png" alt="Evpatoria" />
+                                    </div>
+                                    <div class="prices__card-content">
+                                        <p class="prices__card-cities">
+                                            <span>Симферополь</span>
+                                            <span>Евпатория</span>
+                                        </p>
+                                        <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                        <a href="#" class="prices__card-btn btn">
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </article>
+                                
+                                <article class="prices__card">
+                                    <div class="prices__card-image">
+                                        <img src="/images/prices/1.png" alt="Evpatoria" />
+                                    </div>
+                                    <div class="prices__card-content">
+                                        <p class="prices__card-cities">
+                                            <span>Симферополь</span>
+                                            <span>Евпатория</span>
+                                        </p>
+                                        <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                        <a href="#" class="prices__card-btn btn">
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </article>
+                                
+                                <article class="prices__card">
+                                    <div class="prices__card-image">
+                                        <img src="/images/prices/1.png" alt="Evpatoria" />
+                                    </div>
+                                    <div class="prices__card-content">
+                                        <p class="prices__card-cities">
+                                            <span>Симферополь</span>
+                                            <span>Евпатория</span>
+                                        </p>
+                                        <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                        <a href="#" class="prices__card-btn btn">
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </article>
+                                
+                                <article class="prices__card">
+                                    <div class="prices__card-image">
+                                        <img src="/images/prices/1.png" alt="Evpatoria" />
+                                    </div>
+                                    <div class="prices__card-content">
+                                        <p class="prices__card-cities">
+                                            <span>Симферополь</span>
+                                            <span>Евпатория</span>
+                                        </p>
+                                        <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                        <a href="#" class="prices__card-btn btn">
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </article>
+                                
+                                <article class="prices__card">
+                                    <div class="prices__card-image">
+                                        <img src="/images/prices/1.png" alt="Evpatoria" />
+                                    </div>
+                                    <div class="prices__card-content">
+                                        <p class="prices__card-cities">
+                                            <span>Симферополь</span>
+                                            <span>Евпатория</span>
+                                        </p>
+                                        <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                        <a href="#" class="prices__card-btn btn">
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </article>
+                                
+                                <article class="prices__card">
+                                    <div class="prices__card-image">
+                                        <img src="/images/prices/1.png" alt="Evpatoria" />
+                                    </div>
+                                    <div class="prices__card-content">
+                                        <p class="prices__card-cities">
+                                            <span>Симферополь</span>
+                                            <span>Евпатория</span>
+                                        </p>
+                                        <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                        <a href="#" class="prices__card-btn btn">
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </article>
+                                
+                            </div>
+                            <!-- <div class="prices__person-wrapper"> -->
+                            <div class="prices__person">
+                                <img
+                                    src="/images/prices/person.svg"
+                                    alt="Vanya"
+                                />
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </section>
+                <section class="stages">
+                    <div class="container">
+                        <p class="stages__bg-text bg-text">Этапы работы</p>
+                        <div class="stages__section-title section-title">
+                            <h2>Как это работает</h2>
+                            <p>
+                                Услуга трансфера от TAXI VANYA - выгодная
+                                альтернатива вызова такси в Крыму, в аэропорт
+                                или из аэропорта. Мы можем организовать поездку
+                                между городами Крыма или туристическими местами.
+                            </p>
+                        </div>
+                        <div class="stages__steps">
+                            <div class="stages__step">
+                                <div class="stages__step-smile">
+                                    <span class="stages__number">01</span>
+                                    <img
+                                        src="/images/stages/emoji.svg"
+                                        alt="Emoji"
+                                    />
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur.
+                                    Scelerisque quisque eu pharetra mus laoreet
+                                    est.
+                                </p>
+                            </div>
+                            <svg
+                                width="191"
+                                height="105"
+                                viewBox="0 0 191 105"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M114.5 13.5004L113.746 14.1567L114.5 13.5004ZM190.64 98.2692C191.064 97.9159 191.122 97.2854 190.769 96.8609L185.013 89.9421C184.66 89.5175 184.029 89.4597 183.605 89.8129C183.18 90.1661 183.122 90.7966 183.475 91.2212L188.592 97.3712L182.442 102.488C182.017 102.841 181.959 103.471 182.312 103.896C182.666 104.32 183.296 104.378 183.721 104.025L190.64 98.2692ZM1.33633 14.4421C4.67918 13.2482 9.2851 12.7027 14.8161 12.6537C20.3307 12.6047 26.6884 13.0489 33.4946 13.7881C47.1133 15.2672 62.4243 17.9147 76.2421 20.1042C90.0014 22.2845 102.36 24.0259 109.923 23.6297C111.822 23.5302 113.476 23.294 114.799 22.8705C116.106 22.4519 117.224 21.8069 117.859 20.7907C118.521 19.7288 118.526 18.4793 118.055 17.1686C117.593 15.8817 116.648 14.4455 115.254 12.844L113.746 14.1567C115.068 15.6773 115.832 16.8947 116.173 17.8444C116.505 18.7702 116.406 19.3401 116.162 19.7317C115.889 20.169 115.296 20.6115 114.189 20.9658C113.098 21.3152 111.635 21.5372 109.818 21.6324C102.511 22.0153 90.387 20.3207 76.5551 18.1289C62.7817 15.9464 47.3933 13.2858 33.7106 11.7998C26.8661 11.0565 20.4225 10.6038 14.7984 10.6537C9.19082 10.7035 4.32082 11.2525 0.663666 12.5586L1.33633 14.4421ZM115.254 12.844C109.779 6.55033 105.044 2.86964 101.134 1.40743C99.1658 0.671218 97.3525 0.477716 95.7453 0.854895C94.1231 1.2356 92.8044 2.17641 91.8102 3.5347C89.8608 6.19819 89.1509 10.4617 89.5351 15.5444C89.9226 20.6709 91.435 26.8058 94.1376 33.3805C104.948 59.6807 134.992 93.458 189.909 98.4962L190.091 96.5046C136.008 91.5428 106.552 58.3201 95.9874 32.6202C93.3463 26.1949 91.8978 20.2672 91.5294 15.3937C91.1577 10.4764 91.897 6.80244 93.4241 4.71593C94.1683 3.69922 95.0947 3.06191 96.2022 2.80199C97.3248 2.53855 98.7258 2.64193 100.434 3.28072C103.877 4.56852 108.346 7.95035 113.746 14.1567L115.254 12.844Z"
+                                    fill="#FFC000"
+                                />
+                            </svg>
+                            <div class="stages__step">
+                                <div class="stages__step-smile">
+                                    <span class="stages__number">01</span>
+                                    <img
+                                        src="/images/stages/emoji.svg"
+                                        alt="Emoji"
+                                    />
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur.
+                                    Scelerisque quisque eu pharetra mus laoreet
+                                    est.
+                                </p>
+                            </div>
+                            <svg
+                                width="225"
+                                height="95"
+                                viewBox="0 0 225 95"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M103.866 56.5838L104.453 57.3936L103.866 56.5838ZM215.704 0.916385C216.063 0.496951 216.694 0.448201 217.114 0.807495L223.949 6.66256C224.368 7.02186 224.417 7.65314 224.058 8.07258C223.699 8.49201 223.067 8.54076 222.648 8.18147L216.572 2.97696L211.368 9.05258C211.008 9.47201 210.377 9.52076 209.958 9.16147C209.538 8.80217 209.49 8.17089 209.849 7.75145L215.704 0.916385ZM1.88656 67.5519C20.8528 87.1892 40.8227 93.1807 59.0571 91.9765C77.3383 90.7691 93.9757 82.3196 106.173 72.9C112.267 68.1936 117.228 63.2639 120.712 58.9125C122.454 56.7364 123.815 54.7181 124.764 52.9566C125.722 51.1777 126.221 49.7304 126.316 48.6807C126.409 47.6517 126.115 47.2325 125.751 47.0333C125.257 46.7633 124.235 46.6507 122.402 47.1517C118.796 48.1368 112.946 51.2423 104.453 57.3936L103.28 55.7739C111.802 49.6015 117.899 46.3088 121.875 45.2224C123.832 44.6877 125.509 44.621 126.711 45.2788C128.042 46.0074 128.44 47.3977 128.308 48.8602C128.178 50.3021 127.536 52.0283 126.525 53.905C125.505 55.7991 124.069 57.9186 122.273 60.1624C118.68 64.651 113.602 69.6902 107.396 74.4829C94.9923 84.0615 77.9844 92.7308 59.1889 93.9721C40.3465 95.2165 19.8083 88.9866 0.447988 68.9413L1.88656 67.5519ZM104.453 57.3936C101.138 59.7943 98.7369 61.9655 97.1212 63.8995C95.4988 65.8416 94.7215 67.481 94.5403 68.823C94.3656 70.1167 94.7317 71.2163 95.6029 72.1848C96.5039 73.1864 97.9736 74.0732 100.02 74.7848C104.111 76.2077 110.182 76.8192 117.507 76.526C124.811 76.2335 133.285 75.0448 142.14 72.9249C159.862 68.6818 179.007 60.7329 193.312 48.8843C207.597 37.051 216.991 21.3926 215.466 1.64394L217.46 1.48995C219.049 22.0663 209.217 38.3069 194.587 50.4245C179.977 62.5268 160.52 70.5807 142.605 74.8699C133.641 77.0162 125.037 78.2261 117.587 78.5244C110.158 78.8218 103.798 78.2162 99.3628 76.6739C97.1458 75.9029 95.3283 74.87 94.116 73.5224C92.874 72.1417 92.3007 70.4625 92.5582 68.5554C92.8092 66.6965 93.8356 64.7129 95.5863 62.6173C97.3437 60.5137 99.8848 58.2326 103.28 55.7739L104.453 57.3936Z"
+                                    fill="#FFC000"
+                                />
+                            </svg>
+                            <div class="stages__step">
+                                <div class="stages__step-smile">
+                                    <span class="stages__number">01</span>
+                                    <img
+                                        src="/images/stages/emoji.svg"
+                                        alt="Emoji"
+                                    />
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur.
+                                    Scelerisque quisque eu pharetra mus laoreet
+                                    est.
+                                </p>
+                            </div>
+                            <svg
+                                width="218"
+                                height="124"
+                                viewBox="0 0 218 124"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M109 51.4997L108.061 51.1551L109 51.4997ZM217.835 115.05C218.139 114.588 218.011 113.968 217.55 113.665L210.031 108.717C209.57 108.414 208.95 108.542 208.646 109.003C208.343 109.465 208.471 110.085 208.932 110.388L215.615 114.786L211.218 121.469C210.914 121.93 211.042 122.55 211.503 122.854C211.965 123.157 212.585 123.029 212.888 122.568L217.835 115.05ZM2.23576 22.6769C22.1458 1.04621 52.1919 -1.46489 75.5565 6.38511C87.2319 10.3078 97.14 16.7893 103.225 24.6509C109.29 32.4871 111.546 41.6623 108.061 51.1551L109.939 51.8443C113.704 41.5872 111.21 31.6998 104.806 23.4267C98.4225 15.1788 88.1431 8.50409 76.1935 4.48926C52.3081 -3.53575 21.3542 -1.04685 0.764235 21.3225L2.23576 22.6769ZM108.061 51.1551C99.9144 73.3484 98.8401 95.4351 114.442 108.971C122.203 115.705 133.974 120.195 150.72 121.577C167.469 122.96 189.274 121.24 217.202 115.479L216.798 113.521C188.976 119.259 167.376 120.945 150.884 119.584C134.39 118.223 123.083 113.821 115.752 107.461C101.169 94.8077 101.844 73.8944 109.939 51.8443L108.061 51.1551Z"
+                                    fill="#FFC000"
+                                />
+                            </svg>
+                            <div class="stages__step">
+                                <div class="stages__step-smile">
+                                    <span class="stages__number">01</span>
+                                    <img
+                                        src="/images/stages/emoji.svg"
+                                        alt="Emoji"
+                                    />
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur.
+                                    Scelerisque quisque eu pharetra mus laoreet
+                                    est.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <section class="parallaxBottom">
+                <section class="parallaxBottom__questions">
+                    <div class="container">
+                        <div class="parallaxBottom__animLogo">
+                            <img
+                                src="/images/animatedLogo.svg"
+                                style="opacity: 0"
+                                alt="Logo"
+                            />
+                            <img
+                                class="animatedLogo__rotate"
+                                src="/images/animatedLogo/rotate.svg"
+                                alt=""
+                            />
+                            <img
+                                class="animatedLogo__bg"
+                                src="/images/animatedLogo/bg.svg"
+                                alt=""
+                            />
+                            <img
+                                class="animatedLogo__left"
+                                src="/images/animatedLogo/left.svg"
+                                alt=""
+                            />
+                            <img
+                                class="animatedLogo__right"
+                                src="/images/animatedLogo/right.svg"
+                                alt=""
+                            />
+                        </div>
+                        <h3>Остались вопросы?</h3>
+                        <div class="parallaxBottom__contacts">
+                            <div class="parallaxBottom__contacts-wrapper">
+                                <div
+                                    class="parallaxBottom__contacts-tel parallaxBottom__contacts-item"
+                                >
+                                    <h4>Позвоните нам:</h4>
+                                    <a href="tel:8 (800) 777-50-40">8 (800) 777-50-40</a>
+                                    <a href="tel:+7 (978) 200-50-40">+7 (978) 200-50-40</a>
+                                </div>
+                            </div>
+                            <div class="parallaxBottom__contacts-wrapper">
+                                <div
+                                    class="parallaxBottom__contacts-mail parallaxBottom__contacts-item"
+                                >
+                                    <h4>Напишите нам:</h4>
+                                    <a href="mailto:taxivanya@yandex.ru"
+                                        >taxivanya@yandex.ru</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="parallaxBottom__contacts-wrapper">
+                                <div
+                                    class="parallaxBottom__contacts-social parallaxBottom__contacts-item"
+                                >
+                                    <h4>Социальные сети:</h4>
+                                    <p>
+                                        <a href=""
+                                            ><img
+                                                src="/images/whatsapp.svg"
+                                                alt="Whats App"
+                                        /></a>
+                                        <a href=""
+                                            ><img src="/images/viber.svg" alt="Viber"
+                                        /></a>
+                                        <a href=""
+                                            ><img src="/images/telegram.svg" alt="Telegram"
+                                        /></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="parallaxBottom__parallax">
+                    <div class="container">
+                        <div class="parallaxBottom__parallax-bg">
+                            <img
+                                class="parallaxBottom__parallax-cloud1 parallaxBottom__parallax-element"
+                                src="/images/parallax/1.svg"
+                                alt="Cloud"
+                            />
+                            <img
+                                class="parallaxBottom__parallax-cloud2 parallaxBottom__parallax-element"
+                                src="/images/parallax/2.svg"
+                                alt="Cloud"
+                            />
+                            <img
+                                class="parallaxBottom__parallax-cloud3 parallaxBottom__parallax-element"
+                                src="/images/parallax/3.svg"
+                                alt="Cloud"
+                            />
+                            <img
+                                class="parallaxBottom__parallax-cloud4 parallaxBottom__parallax-element"
+                                src="/images/parallax/4.svg"
+                                alt="Cloud"
+                            />
+                            <img
+                                class="parallaxBottom__parallax-cloud5 parallaxBottom__parallax-element"
+                                src="/images/parallax/5.svg"
+                                alt="Cloud"
+                            />
+                            <img
+                                class="parallaxBottom__parallax-cloud6 parallaxBottom__parallax-element"
+                                src="/images/parallax/6.svg"
+                                alt="Cloud"
+                            />
+                            <img
+                                class="parallaxBottom__parallax-buildings parallaxBottom__parallax-element"
+                                src="/images/parallax/buildings.svg"
+                                alt="Buildings"
+                            />
+                        </div>
+                    </div>
+                </section>
+            </section>
+            
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__links">
+                        <a class="nav_link nav_link_black" href="/about.html">О компании</a>
+                        <a class="nav_link nav_link_black" href="/reviews.html">Отзывы</a>
+                        <a class="nav_link nav_link_black" href="/posts.html">Статьи</a>
+                        <a class="nav_link nav_link_black" href="/questions.html"
+                            >Частые вопросы</a
+                        >
+                    </div>
+                    <div class="footer__other">
+                        <span class="footer__copyright">© Copyright 2024г, TAXI VANYA</span>
+                        <a href="#" class="footer__policy">Политика конфиденсальности</a>
+                        <span class="footer__creator"
+                            >Разработано:
+                            <a href="https://arbi-m.com/" target="_blank">
+                                <img src="/images/arbim.svg" alt="arbi:m" />
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </footer>
+            
+        </div>
+    </body>
+</html>
