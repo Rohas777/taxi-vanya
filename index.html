@@ -4,8 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/owl.carousel.min.css" />
         <script src="../js/jquery.min.js" type="module" defer></script>
         <script src="../js/script.js" type="module" defer></script>
+        <script src="../js/owl.carousel.min.js" type="module" defer></script>
         <title>Такси Ваня</title>
     </head>
     <body class="main">
@@ -43,11 +45,94 @@
                         <a class="nav_link" href="/posts.html">Статьи</a>
                         <a class="nav_link" href="/questions.html">Частые вопросы</a>
                     </div>
+                    <div class="nav__phones">
+                        <a href="tel:8 (800) 777-50-40">8 (800) 777-50-40</a>
+                        <a href="tel:+7 (978) 200-50-40">+7 (978) 200-50-40</a>
+                    </div>
                     <a href="/calculation.html" class="nav__btn btn">
                         <span>Заказать</span>
                     </a>
+                    <div class="nav__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </nav>
+            <div class="burger">
+                <div class="container">
+                    <div class="burger__links">
+                        <a class="nav_link nav_link_black" href="/about.html"
+                            >О компании</a
+                        >
+                        <a class="nav_link nav_link_black" href="/reviews.html"
+                            >Отзывы</a
+                        >
+                        <a class="nav_link nav_link_black" href="/posts.html">Статьи</a>
+                        <a class="nav_link nav_link_black" href="/questions.html"
+                            >Частые вопросы</a
+                        >
+                        <a href="/calculation.html" class="burger__btn btn btn_invert">
+                            <span>Заказать</span>
+                        </a>
+                    </div>
+                    <div class="burger__contacts">
+                        <a class="burger__phone" href="tel:8 (800) 777-50-40"
+                            >8 (800) 777-50-40</a
+                        >
+                        <a class="burger__phone" href="tel:+7 (978) 200-50-40"
+                            >+7 (978) 200-50-40</a
+                        >
+                        <a class="burger__mail" href="mailto:taxivanya@yandex.ru"
+                            >taxivanya@yandex.ru</a
+                        >
+                        <div class="burger__socials">
+                            <a href="#">
+                                <svg
+                                    width="22"
+                                    height="22"
+                                    viewBox="0 0 22 22"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M18.7805 3.20833C16.7108 1.14583 13.9512 0 11.0383 0C4.98258 0 0.0766539 4.88889 0.0766539 10.9236C0.0766539 12.8333 0.61324 14.7431 1.5331 16.3472L0 22L5.82579 20.4722C7.43554 21.3125 9.1986 21.7708 11.0383 21.7708C17.0941 21.7708 22 16.8819 22 10.8472C21.9233 8.02083 20.8502 5.27083 18.7805 3.20833ZM16.3275 14.8194C16.0976 15.4306 15.0244 16.0417 14.4878 16.1181C14.0279 16.1944 13.4146 16.1944 12.8014 16.0417C12.4181 15.8889 11.8815 15.7361 11.2683 15.4306C8.50871 14.2847 6.74565 11.5347 6.59234 11.3056C6.43903 11.1528 5.44251 9.85417 5.44251 8.47917C5.44251 7.10417 6.1324 6.49305 6.36237 6.1875C6.59233 5.88194 6.89895 5.88194 7.12892 5.88194C7.28223 5.88194 7.51219 5.88194 7.6655 5.88194C7.81881 5.88194 8.04878 5.80555 8.27874 6.34028C8.50871 6.875 9.04529 8.25 9.12195 8.32639C9.1986 8.47917 9.1986 8.63194 9.12195 8.78472C9.04529 8.9375 8.96864 9.09028 8.81533 9.24305C8.66202 9.39583 8.50871 9.625 8.43205 9.70139C8.27874 9.85417 8.12543 10.0069 8.27874 10.2361C8.43205 10.5417 8.96864 11.3819 9.81185 12.1458C10.885 13.0625 11.7282 13.3681 12.0348 13.5208C12.3415 13.6736 12.4948 13.5972 12.6481 13.4444C12.8014 13.2917 13.338 12.6806 13.4913 12.375C13.6446 12.0694 13.8746 12.1458 14.1045 12.2222C14.3345 12.2986 15.7143 12.9861 15.9442 13.1389C16.2509 13.2917 16.4042 13.3681 16.4808 13.4444C16.5575 13.6736 16.5575 14.2083 16.3275 14.8194Z"
+                                        fill="#111111"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="viber://add?number=#">
+                                <svg
+                                    width="22"
+                                    height="22"
+                                    viewBox="0 0 22 22"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M17.0279 0.522178C13.0349 -0.174059 8.88831 -0.174059 4.89529 0.522178C3.12914 0.870297 0.902269 2.81976 0.518325 4.35149C-0.172775 7.34531 -0.172775 10.4088 0.518325 13.4026C0.979058 14.9343 3.20593 16.8838 4.89529 17.2319C4.97208 17.2319 5.04886 17.3015 5.04886 17.3711V21.7574C5.04886 21.9663 5.35602 22.1055 5.5096 21.8967L7.81326 19.7383C7.81326 19.7383 9.65619 17.9977 9.96335 17.7193C9.96335 17.7193 10.0401 17.6496 10.1169 17.6496C12.4206 17.7193 14.801 17.5104 17.1047 17.1623C18.8709 16.8141 21.0977 14.8647 21.4817 13.333C22.1728 10.3391 22.1728 7.27568 21.4817 4.28186C21.0209 2.81976 18.7941 0.870297 17.0279 0.522178ZM17.1047 13.6115C16.7208 14.3077 16.26 14.8647 15.4921 15.2128C15.2618 15.2824 15.0314 15.352 14.801 15.4217C14.4939 15.352 14.2635 15.2824 14.0332 15.2128C11.5759 14.3077 9.27225 13.0545 7.42932 11.2442C6.43107 10.1999 5.58639 9.01628 4.89529 7.76305C4.58813 7.13644 4.28098 6.57945 4.05061 5.95283C3.82024 5.39584 4.20419 4.83885 4.58813 4.42111C4.97207 4.00337 5.43281 3.72487 5.97033 3.516C6.35428 3.30713 6.73822 3.44638 7.04538 3.72487C7.65969 4.42111 8.274 5.11735 8.73473 5.88321C9.04188 6.37057 8.96509 6.92757 8.42757 7.27568C8.27399 7.34531 8.19721 7.41493 8.04363 7.55418C7.96684 7.6238 7.81326 7.69343 7.73647 7.83267C7.58289 8.04154 7.58289 8.25042 7.65968 8.45929C8.27399 10.0606 9.42583 11.3139 11.192 12.0101C11.4991 12.1493 11.7295 12.219 12.1134 12.219C12.651 12.1494 12.8813 11.5924 13.2653 11.3139C13.6492 11.0354 14.1099 11.0354 14.5707 11.2442C14.9546 11.4531 15.3386 11.7316 15.7993 12.0101C16.1832 12.2886 16.5672 12.4975 16.9511 12.776C17.1815 12.9152 17.2583 13.2633 17.1047 13.6115ZM13.8796 8.38967C13.726 8.38967 13.8028 8.38967 13.8796 8.38967C13.5724 8.38967 13.4956 8.25042 13.4188 8.04155C13.4188 7.9023 13.4188 7.69343 13.3421 7.55418C13.2653 7.27569 13.1117 6.99719 12.8045 6.78832C12.651 6.71869 12.4974 6.64907 12.3438 6.57945C12.1134 6.50982 11.9599 6.50982 11.7295 6.50982C11.4991 6.4402 11.4223 6.30095 11.4223 6.09208C11.4223 5.95283 11.6527 5.81359 11.8063 5.81359C13.0349 5.88321 13.9564 6.50982 14.1099 7.83267C14.1099 7.9023 14.1099 8.04155 14.1099 8.11117C14.1099 8.25042 14.0332 8.38967 13.8796 8.38967ZM13.1117 5.32622C12.7277 5.18697 12.3438 5.04772 11.8831 4.9781C11.7295 4.9781 11.4991 4.90848 11.3456 4.90848C11.1152 4.90848 10.9616 4.76923 11.0384 4.56036C11.0384 4.35149 11.192 4.21224 11.4223 4.28186C12.1902 4.35149 12.8813 4.49073 13.5724 4.76923C14.9546 5.39584 15.7225 6.4402 15.9529 7.83267C15.9529 7.9023 15.9529 7.97192 15.9529 8.04155C15.9529 8.18079 15.9529 8.32004 15.9529 8.52891C15.9529 8.59854 15.9529 8.66816 15.9529 8.73779C15.8761 9.01628 15.3386 9.0859 15.2618 8.73779C15.2618 8.66816 15.185 8.52891 15.185 8.45929C15.185 7.83267 15.0314 7.20606 14.7243 6.64907C14.2635 6.02246 13.726 5.60471 13.1117 5.32622ZM17.2583 9.50365C17.0279 9.50365 16.8743 9.29478 16.8743 9.0859C16.8743 8.66816 16.7976 8.25042 16.7208 7.83267C16.4136 5.60471 14.4171 3.7945 12.0367 3.44638C11.6527 3.37675 11.2688 3.37675 10.9616 3.30713C10.7312 3.30713 10.4241 3.30713 10.3473 3.02863C10.2705 2.81976 10.5009 2.61089 10.7312 2.61089C10.808 2.61089 10.8848 2.61089 10.8848 2.61089C11.0384 2.61089 14.0332 2.68052 10.8848 2.61089C14.11 2.68052 16.7976 4.62998 17.3351 7.55418C17.4119 8.04155 17.4887 8.52891 17.4887 9.0859C17.6422 9.29478 17.4887 9.50365 17.2583 9.50365Z"
+                                        fill="#111111"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg
+                                    width="24"
+                                    height="22"
+                                    viewBox="0 0 24 22"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M24 0.77935L20.2037 21.0841C20.2037 21.0841 19.6725 22.4919 18.2133 21.8167L9.4542 14.6916L9.41358 14.6706C10.5967 13.5435 19.7715 4.79168 20.1724 4.39498C20.7932 3.78059 20.4078 3.41483 19.6871 3.87894L6.13489 13.0097L0.906491 11.1433C0.906491 11.1433 0.0836935 10.8328 0.00453833 10.1577C-0.0756583 9.48139 0.933569 9.11563 0.933569 9.11563L22.2482 0.24452C22.2482 0.24452 24 -0.572091 24 0.77935Z"
+                                        fill="#111111"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
         
         <div class="wrapper">
@@ -113,35 +198,127 @@
                 <section class="calc hideTopParallax">
                     <div class="container">
                         <p class="calc__bg-text bg-text">Расчет стоимости</p>
-                        <div class="calc__form">
+                        <form id="homeCalcForm" class="calc__form calcForm">
                             <div class="calc__wrapper">
                                 <div class="calc__column">
                                     <div class="calc__directions">
-                                        <input type="text" placeholder="Откуда" />
+                                        <input
+                                            type="text"
+                                            name="from"
+                                            placeholder="Откуда"
+                                        />
                                         <div class="calc__swap btn btn_mini">
-                                            <img src="/images/swap.svg" alt="Swap" />
+                                            <div id="swap"></div>
+                                            <svg
+                                                width="25.6"
+                                                height="25.6"
+                                                viewBox="0 0 25.6 25.6"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M6.60005 5.00006L6.60005 21.0001M6.60005 21.0001L1.80005 16.2001M6.60005 21.0001L11.4 16.2001"
+                                                    stroke="#111111"
+                                                    stroke-width="2.4"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                >
+                                                    <animate
+                                                        attributeName="d"
+                                                        begin="swap.mouseover"
+                                                        fill="freeze"
+                                                        restart="whenNotActive"
+                                                        calcMod="paced"
+                                                        dur="0.3s"
+                                                        values="
+                                                    M6.60005 5.00006L6.60005 21.0001M6.60005 21.0001L1.80005 16.2001M6.60005 21.0001L11.4 16.2001;
+                                                  M6.60005 5L6.60005 24.2M6.60005 24.2L1.80005 19.4M6.60005 24.2L11.4 19.4"
+                                                    />
+                                                    <animate
+                                                        attributeName="d"
+                                                        begin="swap.mouseout"
+                                                        fill="freeze"
+                                                        restart="whenNotActive"
+                                                        calcMod="paced"
+                                                        dur="0.3s"
+                                                        values="
+                                                    M6.60005 5L6.60005 24.2M6.60005 24.2L1.80005 19.4M6.60005 24.2L11.4 19.4;
+                                                    M6.60005 5.00006L6.60005 21.0001M6.60005 21.0001L1.80005 16.2001M6.60005 21.0001L11.4 16.2001"
+                                                    />
+                                                </path>
+                                                <path
+                                                    d="M19.4001 21L19.4001 5M19.4001 5L14.6001 9.8M19.4001 5L24.2001 9.8"
+                                                    stroke="#111111"
+                                                    stroke-width="2.4"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                >
+                                                    <animate
+                                                        attributeName="d"
+                                                        begin="swap.mouseover"
+                                                        fill="freeze"
+                                                        restart="whenNotActive"
+                                                        calcMod="paced"
+                                                        dur="0.3s"
+                                                        values="
+                                                    M19.4001 21L19.4001 5M19.4001 5L14.6001 9.8M19.4001 5L24.2001 9.8;
+                                                  M19.4 21L19.4 1.8M19.4 1.8L14.6 6.6M19.4 1.8L24.2 6.6"
+                                                    />
+                                                    <animate
+                                                        attributeName="d"
+                                                        begin="swap.mouseout"
+                                                        fill="freeze"
+                                                        restart="whenNotActive"
+                                                        calcMod="paced"
+                                                        dur="0.3s"
+                                                        values="
+                                                    M19.4 21L19.4 1.8M19.4 1.8L14.6 6.6M19.4 1.8L24.2 6.6;
+                                                  M19.4001 21L19.4001 5M19.4001 5L14.6001 9.8M19.4001 5L24.2001 9.8"
+                                                    />
+                                                </path>
+                                            </svg>
                                         </div>
-                                        <input type="text" placeholder="Куда" />
+                                        <input
+                                            type="text"
+                                            name="to"
+                                            placeholder="Куда"
+                                        />
                                     </div>
                                     <div class="calc__label">
                                         <span>Обратный трансфер <b>*</b></span>
                                         <label class="calc__switch">
-                                            <input type="checkbox" />
-                                            <span class="calc__switch-slider"></span>
+                                            <input
+                                                name="return"
+                                                type="checkbox"
+                                            />
+                                            <span
+                                                class="calc__switch-slider"
+                                            ></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="calc__column">
-                                    <input type="date" placeholder="Дата" max="2100-12-31" />
-                                    <input type="time" placeholder="Время" />
+                                    <input
+                                        type="date"
+                                        name="date"
+                                        placeholder="Дата"
+                                        max="2100-12-31"
+                                    />
+                                    <input
+                                        type="time"
+                                        name="time"
+                                        placeholder="Время"
+                                    />
                                     <div class="calc__passengers">
-                                        <span class="calc__title">Пассажиры:</span>
+                                        <span class="calc__title"
+                                            >Пассажиры:</span
+                                        >
                                         <div class="calc__counts">
-                                            <label>
+                                            <label class="calc__adult">
                                                 <p>Взрослые</p>
                                                 <div class="calc__number">
                                                     <div
-                                                        class="calc__btn btn btn_mini btn_minus"
+                                                        class="calc__minus btn btn_mini btn_minus"
                                                     >
                                                         <span></span>
                                                     </div>
@@ -150,20 +327,21 @@
                                                         value="0"
                                                         min="0"
                                                         max="99"
+                                                        name="adult"
                                                         onkeypress="return false"
                                                     />
                                                     <div
-                                                        class="calc__btn btn btn_mini btn_plus"
+                                                        class="calc__plus btn btn_mini btn_plus"
                                                     >
                                                         <span></span>
                                                     </div>
                                                 </div>
                                             </label>
-                                            <label>
+                                            <label class="calc__kids">
                                                 <p>Дети</p>
                                                 <div class="calc__number">
                                                     <div
-                                                        class="calc__btn btn btn_mini btn_minus"
+                                                        class="calc__minus btn btn_mini btn_minus"
                                                     >
                                                         <span></span>
                                                     </div>
@@ -172,10 +350,11 @@
                                                         value="0"
                                                         min="0"
                                                         max="99"
+                                                        name="kids"
                                                         onkeypress="return false"
                                                     />
                                                     <div
-                                                        class="calc__btn btn btn_mini btn_plus"
+                                                        class="calc__plus btn btn_mini btn_plus"
                                                     >
                                                         <span></span>
                                                     </div>
@@ -186,15 +365,21 @@
                                 </div>
                             </div>
                             <div class="calc__bottom">
-                                <p><b>*</b> Обратный трансфер со скидкой <b>10%</b></p>
-                                <div class="calc__btn btn btn_act">
+                                <p>
+                                    <b>*</b> Обратный трансфер со скидкой
+                                    <b>10%</b>
+                                </p>
+                                <button
+                                    type="submit"
+                                    class="calc__btn btn btn_act"
+                                >
                                     <span>Найти</span>
-                                </div>
+                                </button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </section>
-                
+
                 <section class="advantages">
                     <div class="container">
                         <p class="advantages__bg-text bg-text">Преимущества</p>
@@ -554,14 +739,160 @@
                                 </article>
                                 
                             </div>
-                            <!-- <div class="prices__person-wrapper"> -->
                             <div class="prices__person">
                                 <img
                                     src="/images/prices/person.svg"
                                     alt="Vanya"
                                 />
                             </div>
-                            <!-- </div> -->
+                            <div class="prices__mobile">
+                                <div class="slider-animation">
+                                    <div class="slider-animation__slides">
+                                        <img src="/images/animation__slide.png" alt="" />
+                                    </div>
+                                    <div class="slider-animation__hand">
+                                        <img src="/images/animation__hand.svg" alt="" />
+                                    </div>
+                                </div>
+                                
+                                <div class="prices__carousel owl-carousel">
+                                    <article class="prices__card">
+                                        <div class="prices__card-image">
+                                            <img src="/images/prices/1.png" alt="Evpatoria" />
+                                        </div>
+                                        <div class="prices__card-content">
+                                            <p class="prices__card-cities">
+                                                <span>Симферополь</span>
+                                                <span>Евпатория</span>
+                                            </p>
+                                            <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                            <a href="#" class="prices__card-btn btn">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    
+                                    <article class="prices__card">
+                                        <div class="prices__card-image">
+                                            <img
+                                                src="/images/prices/2.png"
+                                                alt="Sevastopol"
+                                            />
+                                        </div>
+                                        <div class="prices__card-content">
+                                            <p class="prices__card-cities">
+                                                <span>Симферополь</span>
+                                                <span>Севастополь</span>
+                                            </p>
+                                            <p class="prices__card-price">
+                                                от <span>2 000</span> ₽
+                                            </p>
+                                            <a
+                                                href="#"
+                                                class="prices__card-btn btn"
+                                            >
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    <article class="prices__card">
+                                        <div class="prices__card-image">
+                                            <img src="/images/prices/1.png" alt="Evpatoria" />
+                                        </div>
+                                        <div class="prices__card-content">
+                                            <p class="prices__card-cities">
+                                                <span>Симферополь</span>
+                                                <span>Евпатория</span>
+                                            </p>
+                                            <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                            <a href="#" class="prices__card-btn btn">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    
+                                    <article class="prices__card">
+                                        <div class="prices__card-image">
+                                            <img src="/images/prices/1.png" alt="Evpatoria" />
+                                        </div>
+                                        <div class="prices__card-content">
+                                            <p class="prices__card-cities">
+                                                <span>Симферополь</span>
+                                                <span>Евпатория</span>
+                                            </p>
+                                            <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                            <a href="#" class="prices__card-btn btn">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    
+                                    <article class="prices__card">
+                                        <div class="prices__card-image">
+                                            <img src="/images/prices/1.png" alt="Evpatoria" />
+                                        </div>
+                                        <div class="prices__card-content">
+                                            <p class="prices__card-cities">
+                                                <span>Симферополь</span>
+                                                <span>Евпатория</span>
+                                            </p>
+                                            <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                            <a href="#" class="prices__card-btn btn">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    
+                                    <article class="prices__card">
+                                        <div class="prices__card-image">
+                                            <img src="/images/prices/1.png" alt="Evpatoria" />
+                                        </div>
+                                        <div class="prices__card-content">
+                                            <p class="prices__card-cities">
+                                                <span>Симферополь</span>
+                                                <span>Евпатория</span>
+                                            </p>
+                                            <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                            <a href="#" class="prices__card-btn btn">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    
+                                    <article class="prices__card">
+                                        <div class="prices__card-image">
+                                            <img src="/images/prices/1.png" alt="Evpatoria" />
+                                        </div>
+                                        <div class="prices__card-content">
+                                            <p class="prices__card-cities">
+                                                <span>Симферополь</span>
+                                                <span>Евпатория</span>
+                                            </p>
+                                            <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                            <a href="#" class="prices__card-btn btn">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    
+                                    <article class="prices__card">
+                                        <div class="prices__card-image">
+                                            <img src="/images/prices/1.png" alt="Evpatoria" />
+                                        </div>
+                                        <div class="prices__card-content">
+                                            <p class="prices__card-cities">
+                                                <span>Симферополь</span>
+                                                <span>Евпатория</span>
+                                            </p>
+                                            <p class="prices__card-price">от <span>2 000</span> ₽</p>
+                                            <a href="#" class="prices__card-btn btn">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -678,11 +1009,6 @@
                 <section class="parallaxBottom__questions">
                     <div class="container">
                         <div class="parallaxBottom__animLogo">
-                            <img
-                                src="/images/animatedLogo.svg"
-                                style="opacity: 0"
-                                alt="Logo"
-                            />
                             <img
                                 class="animatedLogo__rotate"
                                 src="/images/animatedLogo/rotate.svg"

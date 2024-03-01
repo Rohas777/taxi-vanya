@@ -1,0 +1,40 @@
+<svg
+                                class="swap_down"
+                                id= "swap"
+                                width="13"
+                                height="20"
+                                viewBox="0 0 13 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M6.60005 2L6.60005 18M6.60005 18L1.80005 13.2M6.60005 18L11.4 13.2"
+                                    stroke="#111111"
+                                    stroke-width="2.4"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <animate
+                                        attributeName="d"
+                                        begin="swap.mouseover"
+                                        fill="freeze"
+                                        restart="whenNotActive"
+                                        calcMod="paced"
+                                        dur="0.3s"
+                                        values="
+                                      M6.60005 2L6.60005 18M6.60005 18L1.80005 13.2M6.60005 18L11.4 13.2;
+                                      M6.60005 2L6.60005 21.2M6.60005 21.2L1.80005 16.4M6.60005 21.2L11.4 16.4"
+                                    />
+                                    <animate
+                                        attributeName="d"
+                                        begin="swap.mouseout"
+                                        fill="freeze"
+                                        restart="whenNotActive"
+                                        calcMod="paced"
+                                        dur="0.3s"
+                                        values="
+                                      M6.60005 2L6.60005 21.2M6.60005 21.2L1.80005 16.4M6.60005 21.2L11.4 16.4;
+                                      M6.60005 2L6.60005 18M6.60005 18L1.80005 13.2M6.60005 18L11.4 13.2"
+                                    />
+                                </path>
+                            </svg>

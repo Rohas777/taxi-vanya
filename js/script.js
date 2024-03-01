@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    $(".nav__burger").click(function () {
+        $(this).toggleClass("active");
+        $(".burger").toggleClass("active");
+    });
+    
+
     // Параллакс верхнего блока
 
     const parallax = $(".parallax");
@@ -118,8 +124,6 @@ $(document).ready(function () {
     let headerHeight = $("header").outerHeight();
     let mainMarginTop = headerHeight + parallaxBottomHeight;
 
-    // $(".main-head").css("margin-top", 530 + headerHeight + "px");
-
     // Перестановка блоков параллакса по уровню слоёв
 
     $(window).scroll(function () {
@@ -130,6 +134,34 @@ $(document).ready(function () {
             $(".parallax").removeClass("layerDown");
             $(".parallaxBottom").removeClass("layerUp");
         }
+    });
+
+    $(".prices__carousel.owl-carousel").owlCarousel({
+        items: 2, // Количество элементов в карусели
+        loop: true, // Включение бесконечного цикла
+        margin: 20, // Отступ между элементами
+        autoplay: true, // Автоматическая прокрутка
+        autoplayTimeout: 4000, // Время между автопрокруткой в миллисекундах
+        dots: true, // Включение точек для переключения слайдов
+        responsive: {
+            0: {
+                items: 1,
+            },
+            640: {
+                items: 2,
+            },
+        },
+    });
+
+    // Карусель на главной странице
+
+    $(".comments__carousel.owl-carousel").owlCarousel({
+        items: 1, // Количество элементов в карусели
+        loop: true, // Включение бесконечного цикла
+        margin: 20, // Отступ между элементами
+        autoplay: true, // Автоматическая прокрутка
+        autoplayTimeout: 4000, // Время между автопрокруткой в миллисекундах
+        dots: true, // Включение точек для переключения слайдов
     });
 
     // Наложение хедера поверх основного блока
@@ -206,4 +238,72 @@ $(document).ready(function () {
         accordeon.toggleClass("active");
         accordeon.find(".accordeon__body").slideToggle(300);
     });
+
+    // Обработка счётчика
+    $(".calc__adult .calc__minus").click(function () {
+        let value = parseInt($('[name="adult"]').val());
+        if (value > 0) {
+            $('[name="adult"]').val(value - 1);
+        }
+    });
+    $(".calc__adult .calc__plus").click(function () {
+        let value = parseInt($('[name="adult"]').val());
+        if (value < 100) {
+            $('[name="adult"]').val(value + 1);
+        }
+    });
+    $(".calc__kids .calc__minus").click(function () {
+        let value = parseInt($('[name="kids"]').val());
+        if (value > 0) {
+            $('[name="kids"]').val(value - 1);
+        }
+    });
+    $(".calc__kids .calc__plus").click(function () {
+        let value = parseInt($('[name="kids"]').val());
+        if (value < 100) {
+            $('[name="kids"]').val(value + 1);
+        }
+    });
+
+    $("#homeCalcForm").on("submit", function (e) {
+        e.preventDefault();
+        localStorage.setItem("adult", $('[name="adult"]').val());
+        localStorage.setItem("kids", $('[name="kids"]').val());
+        localStorage.setItem("from", $('[name="from"]').val());
+        localStorage.setItem("to", $('[name="to"]').val());
+        localStorage.setItem("return", $('[name="return"]').prop("checked"));
+        localStorage.setItem("date", $('[name="date"]').val());
+        localStorage.setItem("time", $('[name="time"]').val());
+        localStorage.setItem("redirect", true);
+
+        window.location.href = "calculation.html";
+    });
+
+    const cityFromElement = $(".calculation__path #from");
+    const cityToElement = $(".calculation__path #to");
+
+    if (localStorage.getItem("redirect")) {
+        const isReturnTransfer = localStorage.getItem("return") === "true";
+        console.log(isReturnTransfer);
+        // Заполняем форму данными из localStorage
+        $('#finalCalcForm [name="adult"]').val(localStorage.getItem("adult"));
+        $('#finalCalcForm [name="kids"]').val(localStorage.getItem("kids"));
+        $('#finalCalcForm [name="from"]').val(localStorage.getItem("from"));
+        $('#finalCalcForm [name="to"]').val(localStorage.getItem("to"));
+        $('#finalCalcForm [name="return"]').prop("checked", isReturnTransfer);
+        $('#finalCalcForm [name="date"]').val(localStorage.getItem("date"));
+        $('#finalCalcForm [name="time"]').val(localStorage.getItem("time"));
+
+        cityFromElement.text(localStorage.getItem("from"));
+        cityToElement.text(localStorage.getItem("to"));
+        if (isReturnTransfer) {
+            $("#arrowReturnTrue").css("display", "block");
+        } else {
+            $("#arrowReturnFalse").css("display", "block");
+        }
+
+        localStorage.clear();
+    } else {
+        $(".calculation__path").css("display", "none");
+    }
 });
