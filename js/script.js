@@ -21,7 +21,7 @@ $(document).ready(function () {
     let pos = 0,
         coordPercent = 0;
 
-    function setMouseParallaxStyle() {
+    const setMouseParallaxStyle = () => {
         const dist = coordPercent - pos;
 
         pos = pos + dist * speed;
@@ -34,7 +34,7 @@ $(document).ready(function () {
         cloud5.css("transform", "translateX(" + pos / 2.5 + "%)");
         cloud6.css("transform", "translateX(" + pos * 0.8 + "%)");
         requestAnimationFrame(setMouseParallaxStyle);
-    }
+    };
 
     setMouseParallaxStyle();
 
@@ -240,70 +240,305 @@ $(document).ready(function () {
     });
 
     // Обработка счётчика
+
     $(".calc__adult .calc__minus").click(function () {
+
         let value = parseInt($('[name="adult"]').val());
+
         if (value > 0) {
+
             $('[name="adult"]').val(value - 1);
+
         }
+
     });
+
     $(".calc__adult .calc__plus").click(function () {
+
         let value = parseInt($('[name="adult"]').val());
+
         if (value < 100) {
+
             $('[name="adult"]').val(value + 1);
+
         }
+
     });
+
     $(".calc__kids .calc__minus").click(function () {
+
         let value = parseInt($('[name="kids"]').val());
+
         if (value > 0) {
+
             $('[name="kids"]').val(value - 1);
+
         }
+
     });
+
     $(".calc__kids .calc__plus").click(function () {
+
         let value = parseInt($('[name="kids"]').val());
+
         if (value < 100) {
+
             $('[name="kids"]').val(value + 1);
+
         }
+
     });
+
+    
 
     $("#homeCalcForm").on("submit", function (e) {
+
         e.preventDefault();
+
         localStorage.setItem("adult", $('[name="adult"]').val());
+
         localStorage.setItem("kids", $('[name="kids"]').val());
+
         localStorage.setItem("from", $('[name="from"]').val());
+
         localStorage.setItem("to", $('[name="to"]').val());
+
         localStorage.setItem("return", $('[name="return"]').prop("checked"));
+
         localStorage.setItem("date", $('[name="date"]').val());
+
         localStorage.setItem("time", $('[name="time"]').val());
+
         localStorage.setItem("redirect", true);
 
+    
+
         window.location.href = "calculation.html";
+
     });
 
+    
+
     const cityFromElement = $(".calculation__path #from");
+
     const cityToElement = $(".calculation__path #to");
 
+    
+
     if (localStorage.getItem("redirect")) {
+
         const isReturnTransfer = localStorage.getItem("return") === "true";
+
         console.log(isReturnTransfer);
+
         // Заполняем форму данными из localStorage
+
         $('#finalCalcForm [name="adult"]').val(localStorage.getItem("adult"));
+
         $('#finalCalcForm [name="kids"]').val(localStorage.getItem("kids"));
+
         $('#finalCalcForm [name="from"]').val(localStorage.getItem("from"));
+
         $('#finalCalcForm [name="to"]').val(localStorage.getItem("to"));
+
         $('#finalCalcForm [name="return"]').prop("checked", isReturnTransfer);
+
         $('#finalCalcForm [name="date"]').val(localStorage.getItem("date"));
+
         $('#finalCalcForm [name="time"]').val(localStorage.getItem("time"));
 
+    
+
         cityFromElement.text(localStorage.getItem("from"));
+
         cityToElement.text(localStorage.getItem("to"));
+
         if (isReturnTransfer) {
+
             $("#arrowReturnTrue").css("display", "block");
+
         } else {
+
             $("#arrowReturnFalse").css("display", "block");
+
         }
 
+    
+
         localStorage.clear();
+
     } else {
+
         $(".calculation__path").css("display", "none");
+
     }
+
+    
+
+    // Анимация свапа инпутов направления поездки
+
+    
+
+    const swapButton = $(".calc__swap");
+
+    
+
+    swapButton.click(function () {
+
+        let from = $("[name='from']");
+
+        let to = $("[name='to']");
+
+        let fromName = $("[name='from']").attr("name");
+
+        let toName = $("[name='to']").attr("name");
+
+        let fromPlaceholder = $("[name='from']").attr("placeholder");
+
+        let toPlaceholder = $("[name='to']").attr("placeholder");
+
+    
+
+        from.css({ zIndex: "2" });
+
+        to.css({ zIndex: "1" });
+
+    
+
+        requestAnimationFrame(function () {
+
+            from.animate(
+
+                {
+
+                    top: "100%",
+
+                    zIndex: 2,
+
+                },
+
+                {
+
+                    duration: 300,
+
+                    complete: () => {
+
+                        from.attr("placeholder", toPlaceholder);
+
+                    },
+
+                }
+
+            );
+
+            to.animate(
+
+                {
+
+                    top: "65px",
+
+                    zIndex: 1,
+
+                },
+
+                {
+
+                    duration: 300,
+
+                    complete: () => {
+
+                        to.attr("placeholder", fromPlaceholder);
+
+                    },
+
+                }
+
+            );
+
+        });
+
+    
+
+        // Меняем значения атрибутов name
+
+        from.attr("name", toName);
+
+        to.attr("name", fromName);
+
+    });
+
+    
+
+    // Обработка кастомного инпута молитики конфиденциальности
+
+    $(".check-label").on("click", function () {
+        let isChecked = $(this).children("input").prop("checked");
+        if (isChecked) {
+            $(this).find(".fakecheck").addClass("checked");
+        } else {
+            $(this).find(".fakecheck").removeClass("checked");
+        }
+    });
+
+    // Функция анимированной замены текста
+
+    function animateTextChange(element, newText, duration) {
+        // Создаем анимацию, которая изменяет свойство textContent
+        $(element).animate(
+            {
+                opacity: 0,
+            },
+            {
+                duration: duration / 2,
+                complete: function () {
+                    // Изменяем текст элемента
+                    element.text(newText);
+                    // Анимируем возвращение элемента к видимому состоянию
+                    $(element).animate(
+                        {
+                            opacity: 1,
+                        },
+                        duration / 2
+                    );
+                },
+            }
+        );
+    }
+
+    // Обработка оценки в форме отзыва
+
+    $(".form__radio").click(function () {
+        let grade = parseInt($(this).children("input:checked").val());
+        $(this)
+            .parent(".form__stars")
+            .removeClass("oneStar twoStar threeStar fourStar fiveStar");
+
+        switch (grade) {
+            case 0:
+                $(".form__grade p").text("– ваша оценка");
+                break;
+            case 1:
+                $(this).parent(".form__stars").addClass("oneStar");
+                animateTextChange($(".form__grade p"), "– Ужасно", 300);
+                break;
+            case 2:
+                $(this).parent(".form__stars").addClass("twoStar");
+                animateTextChange($(".form__grade p"), "– Плохо", 300);
+                break;
+            case 3:
+                $(this).parent(".form__stars").addClass("threeStar");
+                animateTextChange($(".form__grade p"), "– Нормально", 300);
+                break;
+            case 4:
+                $(this).parent(".form__stars").addClass("fourStar");
+                animateTextChange($(".form__grade p"), "– Хорошо", 300);
+                break;
+            case 5:
+                $(this).parent(".form__stars").addClass("fiveStar");
+                animateTextChange($(".form__grade p"), "– Прекрасно", 300);
+                break;
+            default:
+                console.log(grade);
+        }
+    });
 });

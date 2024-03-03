@@ -6,8 +6,8 @@
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/owl.carousel.min.css" />
         <script src="../js/jquery.min.js" type="module" defer></script>
-        <script src="../js/script.js" type="module" defer></script>
         <script src="../js/owl.carousel.min.js" type="module" defer></script>
+        <script src="../js/script.js" type="module" defer></script>
         <title>Такси Ваня - Частые вопросы</title>
     </head>
     <body class="questions">
@@ -311,8 +311,32 @@
                                 rows="10"
                                 placeholder="Ваш отзыв"
                             ></textarea>
-                            <label for="policy">
-                                <input type="checkbox" name="policy" />
+                            <label for="policy" class="check-label">
+                                <input
+                                    type="checkbox"
+                                    name="policy"
+                                    id="policy"
+                                />
+                                <span class="fakecheck">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0 0 24 24"
+                                        width="24px"
+                                        height="24px"
+                                        id="checkmark"
+                                    >
+                                        <polyline
+                                            fill="none"
+                                            stroke="#111111"
+                                            stroke-width="3"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-miterlimit="10"
+                                            points=" 5,12 9,16 18,8"
+                                        />
+                                    </svg>
+                                </span>
                                 <p>
                                     Согласен с
                                     <a href="">политикой конфиденсальности</a>

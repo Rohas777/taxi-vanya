@@ -6,8 +6,8 @@
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/owl.carousel.min.css" />
         <script src="../js/jquery.min.js" type="module" defer></script>
-        <script src="../js/script.js" type="module" defer></script>
         <script src="../js/owl.carousel.min.js" type="module" defer></script>
+        <script src="../js/script.js" type="module" defer></script>
         <title>Такси Ваня - Расчет стоимости</title>
     </head>
     <body class="calculation">
@@ -393,21 +393,50 @@
                                 <div class="options__checks">
                                     <h5>Услуги</h5>
                                     <div class="options__inputs">
-                                        <label for="conditioner">
-                                            <div class="options__desc">
+                                        <label
+                                            class="check-label"
+                                            for="conditioner"
+                                        >
+                                            <span class="options__desc">
                                                 <img
                                                     src="/images/options/wind.svg"
                                                     alt="Conditioner"
                                                 />
                                                 <span>Кондиционер</span>
-                                            </div>
+                                            </span>
                                             <input
+                                                id="conditioner"
                                                 type="checkbox"
                                                 name="conditioner"
                                             />
+                                            <span
+                                                class="options__fakecheck fakecheck"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    viewBox="0 0 24 24"
+                                                    width="24px"
+                                                    height="24px"
+                                                    id="checkmark"
+                                                >
+                                                    <polyline
+                                                        fill="none"
+                                                        stroke="#111111"
+                                                        stroke-width="3"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-miterlimit="10"
+                                                        points=" 5,12 9,16 18,8"
+                                                    />
+                                                </svg>
+                                            </span>
                                         </label>
-                                        <label for="baby_chair">
-                                            <div class="options__desc">
+                                        <label
+                                            class="check-label"
+                                            for="baby_chair"
+                                        >
+                                            <span class="options__desc">
                                                 <img
                                                     src="/images/options/chair.svg"
                                                     alt="Baby chair"
@@ -417,27 +446,73 @@
                                                         >(по обращению)</i
                                                     ></span
                                                 >
-                                            </div>
+                                            </span>
                                             <input
                                                 type="checkbox"
                                                 name="baby_chair"
+                                                id="baby_chair"
                                             />
+                                            <span
+                                                class="options__fakecheck fakecheck"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    viewBox="0 0 24 24"
+                                                    width="24px"
+                                                    height="24px"
+                                                    id="checkmark"
+                                                >
+                                                    <polyline
+                                                        fill="none"
+                                                        stroke="#111111"
+                                                        stroke-width="3"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-miterlimit="10"
+                                                        points=" 5,12 9,16 18,8"
+                                                    />
+                                                </svg>
+                                            </span>
                                         </label>
-                                        <label for="water">
-                                            <div class="options__desc">
+                                        <label class="check-label" for="water">
+                                            <span class="options__desc">
                                                 <img
                                                     src="/images/options/bottle.svg"
                                                     alt="Water"
                                                 />
                                                 <span>Питьевая вода</span>
-                                            </div>
+                                            </span>
                                             <input
                                                 type="checkbox"
                                                 name="water"
+                                                id="water"
                                             />
+                                            <span
+                                                class="options__fakecheck fakecheck"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    viewBox="0 0 24 24"
+                                                    width="24px"
+                                                    height="24px"
+                                                    id="checkmark"
+                                                >
+                                                    <polyline
+                                                        fill="none"
+                                                        stroke="#111111"
+                                                        stroke-width="3"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-miterlimit="10"
+                                                        points=" 5,12 9,16 18,8"
+                                                    />
+                                                </svg>
+                                            </span>
                                         </label>
-                                        <label for="sign">
-                                            <div class="options__desc">
+                                        <label class="check-label" for="sign">
+                                            <span class="options__desc">
                                                 <img
                                                     src="/images/options/wind.svg"
                                                     alt="Meet with a sign"
@@ -446,11 +521,34 @@
                                                     >Встреча<br />с
                                                     табличкой</span
                                                 >
-                                            </div>
+                                            </span>
                                             <input
                                                 type="checkbox"
                                                 name="sign"
+                                                id="sign"
                                             />
+                                            <span
+                                                class="options__fakecheck fakecheck"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    viewBox="0 0 24 24"
+                                                    width="24px"
+                                                    height="24px"
+                                                    id="checkmark"
+                                                >
+                                                    <polyline
+                                                        fill="none"
+                                                        stroke="#111111"
+                                                        stroke-width="3"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-miterlimit="10"
+                                                        points=" 5,12 9,16 18,8"
+                                                    />
+                                                </svg>
+                                            </span>
                                         </label>
                                     </div>
                                 </div>
