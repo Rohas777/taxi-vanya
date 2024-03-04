@@ -3668,7 +3668,7 @@ header {
   }
 
   .calculation .parallax .calculation__path img {
-    display: none;
+    display: none !important;
   }
 
   .calculation .options__details {
