@@ -2381,11 +2381,11 @@ header {
   color: #111111;
   height: 65px;
   border: 1px solid #a7a8ab;
-  -webkit-transition: all 0.3s ease-in 0s;
-  -moz-transition: all 0.3s ease-in 0s;
-  -ms-transition: all 0.3s ease-in 0s;
-  -o-transition: all 0.3s ease-in 0s;
-  transition: all 0.3s ease-in 0s;
+  -webkit-transition: border 0.3s ease-in 0s;
+  -moz-transition: border 0.3s ease-in 0s;
+  -ms-transition: border 0.3s ease-in 0s;
+  -o-transition: border 0.3s ease-in 0s;
+  transition: border 0.3s ease-in 0s;
 }
 
 .calc__column input:not(input[type=number]):hover,
@@ -3090,6 +3090,10 @@ header {
 .parallaxBottom__contacts-item p img {
   width: 37px;
   height: 37px;
+}
+
+.parallaxBottom__contacts-tel a {
+  text-decoration: underline;
 }
 
 .news-card {

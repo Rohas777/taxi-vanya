@@ -313,7 +313,7 @@ $(document).ready(function () {
 
     
 
-        window.location.href = "calculation.html";
+        window.location.href = $(".calc__btn").data("redirect-href");
 
     });
 
@@ -328,8 +328,6 @@ $(document).ready(function () {
     if (localStorage.getItem("redirect")) {
 
         const isReturnTransfer = localStorage.getItem("return") === "true";
-
-        console.log(isReturnTransfer);
 
         // Заполняем форму данными из localStorage
 
@@ -365,11 +363,15 @@ $(document).ready(function () {
 
     
 
+        if (!localStorage.getItem("from") && !localStorage.getItem("to")) {
+
+            $(".calculation__path").css("display", "none");
+
+        }
+
+    
+
         localStorage.clear();
-
-    } else {
-
-        $(".calculation__path").css("display", "none");
 
     }
 

@@ -321,14 +321,18 @@
                                 </div>
                                 <div class="calc__column">
                                     <input
-                                        type="date"
+                                        type="text"
                                         name="date"
-                                        placeholder="Дата"
                                         max="2100-12-31"
+                                        onfocus="this.type='date'"
+                                        onblur="if(this.value==''){this.type='text'}"
+                                        placeholder="Дата"
                                     />
                                     <input
-                                        type="time"
+                                        type="text"
                                         name="time"
+                                        onfocus="this.type='time'"
+                                        onblur="if(this.value==''){this.type='text'}"
                                         placeholder="Время"
                                     />
                                     <div class="calc__passengers">
@@ -394,6 +398,7 @@
                                 <button
                                     type="submit"
                                     class="calc__btn btn btn_act"
+                                    data-redirect-href="calculation.html"
                                 >
                                     <span>Найти</span>
                                 </button>
